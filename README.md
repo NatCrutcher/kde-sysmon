@@ -18,6 +18,16 @@ systemctl --user daemon-reload
 systemctl --user enable --now sysmon
 ```
 
+## Update
+
+After rebuilding, stop the daemon before replacing the binary:
+
+```sh
+systemctl --user stop sysmon
+cp build/sysmon ~/.local/bin/
+systemctl --user start sysmon
+```
+
 ## Usage
 
 ```sh
