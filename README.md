@@ -12,7 +12,7 @@ cmake --build build
 ## Install
 
 ```sh
-cp build/kde-sysmon ~/.local/bin/
+cp build/kde-sysmon ~/.local/bin/  # Or use `ln -s`
 cp systemd/kde-sysmon.service ~/.config/systemd/user/
 systemctl --user daemon-reload
 systemctl --user enable --now kde-sysmon
