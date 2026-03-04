@@ -7,7 +7,7 @@
 
 static void usage() {
     fprintf(stderr,
-        "Usage: sysmon [OPTIONS]\n"
+        "Usage: kde-sysmon [OPTIONS]\n"
         "\n"
         "Modes:\n"
         "  --daemon       Run as sampling daemon\n"
@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
     // Load config file if it exists
     const char* home = getenv("HOME");
     if (home) {
-        cfg.load_file(std::string(home) + "/.config/sysmon/sysmon.conf");
+        cfg.load_file(std::string(home) + "/.config/kde-sysmon/kde-sysmon.conf");
     }
 
     for (int i = 1; i < argc; i++) {
@@ -49,7 +49,7 @@ int main(int argc, char* argv[]) {
             usage();
             return 0;
         } else {
-            fprintf(stderr, "sysmon: unknown option '%s'\n", argv[i]);
+            fprintf(stderr, "kde-sysmon: unknown option '%s'\n", argv[i]);
             usage();
             return 1;
         }

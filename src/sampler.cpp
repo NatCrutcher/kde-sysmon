@@ -17,7 +17,7 @@ bool Sampler::init(const std::string& hwmon_name) {
         }
     }
     if (temp_path_.empty()) {
-        fprintf(stderr, "sysmon: hwmon '%s' not found\n", hwmon_name.c_str());
+        fprintf(stderr, "kde-sysmon: hwmon '%s' not found\n", hwmon_name.c_str());
         return false;
     }
 

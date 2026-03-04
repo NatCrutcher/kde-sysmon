@@ -4,7 +4,7 @@ Documentation=https://github.com/nat/monitor
 
 [Service]
 Type=simple
-ExecStart=%h/.local/bin/sysmon --daemon
+ExecStart=%h/.local/bin/kde-sysmon --daemon
 Restart=on-failure
 RestartSec=3
 

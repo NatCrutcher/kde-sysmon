@@ -25,7 +25,7 @@ void Config::load_file(const std::string& path) {
 
 void Config::init_run_dir() {
     uid_t uid = getuid();
-    run_dir = "/run/user/" + std::to_string(uid) + "/sysmon";
+    run_dir = "/run/user/" + std::to_string(uid) + "/kde-sysmon";
     mkdir(run_dir.c_str(), 0700);
 }
 

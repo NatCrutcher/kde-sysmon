@@ -6,7 +6,7 @@
 static int read_and_print(const std::string& path) {
     std::ifstream f(path);
     if (!f) {
-        fprintf(stderr, "sysmon: cannot read %s (daemon running?)\n", path.c_str());
+        fprintf(stderr, "kde-sysmon: cannot read %s (daemon running?)\n", path.c_str());
         return 1;
     }
     std::string line;

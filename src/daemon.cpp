@@ -31,7 +31,7 @@ int run_daemon(Config& cfg) {
     std::string status_path = cfg.run_dir + "/status";
     std::string display_path = cfg.run_dir + "/display";
 
-    fprintf(stderr, "sysmon: daemon started (interval=%.2fs, window=%.2fs, ring=%d)\n",
+    fprintf(stderr, "kde-sysmon: daemon started (interval=%.2fs, window=%.2fs, ring=%d)\n",
             cfg.sample_interval, cfg.average_window, n);
 
     while (g_running) {
@@ -78,6 +78,6 @@ int run_daemon(Config& cfg) {
     // Clean up files
     remove(status_path.c_str());
     remove(display_path.c_str());
-    fprintf(stderr, "sysmon: daemon stopped\n");
+    fprintf(stderr, "kde-sysmon: daemon stopped\n");
     return 0;
 }
